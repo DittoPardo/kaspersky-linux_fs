@@ -2,6 +2,8 @@
 
 Small wrapper for Kaspersky linux file system
 
+[![Gem Version](https://badge.fury.io/rb/kaspersky-linux_fs.svg)](http://badge.fury.io/rb/kaspersky-linux_fs)
+
 ## Installation
 
 Add this line to your application's Gemfile:
@@ -21,6 +23,8 @@ Or install it yourself as:
 ## Usage
 
 ```ruby
+require 'kaspersky/linux_fs'
+
 # prepare arguments
 use_sudo = true
 bin_path_to_kaspersky = '/opt/kaspersky/kav4fs/bin/kav4fs-control'
@@ -29,12 +33,16 @@ bin_path_to_kaspersky = '/opt/kaspersky/kav4fs/bin/kav4fs-control'
 linux_fs = Kaspersky::LinuxFs.new(bin_path_to_kaspersky, use_sudo)
 
 # check file for virus
-file_path = '/home/user/uploads/infected_file.exe'
-response = linux_fs.fast_scan(file_path)
+begin
+  file_path = '/home/user/uploads/infected_file.exe'
+  response = linux_fs.fast_scan(file_path)
 
-# check response
-response.threat? # => true
-response.safe? # => false
+  # check response
+  response.threat? # => true
+  response.safe? # => false
+rescue => e
+ # process exception
+end
 ````
 
 ## Contributing

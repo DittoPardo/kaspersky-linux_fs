@@ -1,5 +1,5 @@
 module Kaspersky
-  module LinuxFs
-    VERSION = "0.0.1"
+  class LinuxFs
+      VERSION = "0.0.2"
   end
 end
