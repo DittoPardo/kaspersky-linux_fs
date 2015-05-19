@@ -20,7 +20,7 @@ Or install it yourself as:
 
 ## Usage
 
-````
+```ruby
 # prepare arguments
 use_sudo = true
 bin_path_to_kaspersky = '/opt/kaspersky/kav4fs/bin/kav4fs-control'
