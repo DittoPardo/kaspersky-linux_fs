@@ -1,5 +1,6 @@
-require "kaspersky/linux_fs/version"
 require 'open3'
+require "kaspersky/linux_fs/version"
+require "kaspersky/linux_fs/response/fast_scan"
 
 module Kaspersky
   class LinuxFs

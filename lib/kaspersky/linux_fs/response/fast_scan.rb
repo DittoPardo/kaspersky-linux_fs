@@ -1,5 +1,5 @@
 module Kaspersky
-  module LinuxFs
+  class LinuxFs
     module Response
       class FastScan
         def initialize(string_response)
