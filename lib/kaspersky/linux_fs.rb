@@ -39,7 +39,7 @@ module Kaspersky
     private
 
     def build_base_request
-      request = @bin
+      request = @bin.dup
 
       # n - non-interactive
       request.prepend('sudo -n ') if @use_sudo
