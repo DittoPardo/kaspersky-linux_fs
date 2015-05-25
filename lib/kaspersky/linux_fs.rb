@@ -51,7 +51,7 @@ module Kaspersky
       data = @default_options.merge(data)
       options = ''
       data.each do |key, value|
-        options += " --#{key.to_s.tr('_', '-')} #{value}"
+        options += " --#{key.to_s.tr('_', '-')} \"#{value}\""
       end
       options
     end
